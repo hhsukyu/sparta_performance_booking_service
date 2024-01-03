@@ -25,10 +25,10 @@ export class User {
   @Column({ type: 'varchar', select: false, nullable: false })
   password: string;
 
-  @Column({ type: 'varchar', unique: true, nullable: false })
+  @Column({ type: 'varchar', nullable: false })
   nickName: string;
 
-  @Column({ type: 'int', default: 1000000 })
+  @Column({ type: 'int', nullable: false })
   point: number;
 
   @Column({ type: 'enum', enum: Role, default: Role.User })
