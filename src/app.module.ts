@@ -4,7 +4,13 @@ import { SnakeNamingStrategy } from 'typeorm-naming-strategies';
 import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule, TypeOrmModuleOptions } from '@nestjs/typeorm';
+
 import { AuthModule } from './auth/auth.module';
+import { User } from './user/entities/user.entity';
+import { UserModule } from './user/user.module';
+// import { Team } from './team/entities/team.entity';
+// import { TeamModule } from './team/team.module';
+// import { SupportMessageModule } from './support-message/support-message.module';
 
 const typeOrmModuleOptions = {
   useFactory: async (
@@ -17,7 +23,7 @@ const typeOrmModuleOptions = {
     host: configService.get('DB_HOST'),
     port: configService.get('DB_PORT'),
     database: configService.get('DB_NAME'),
-    entities: [],
+    entities: [User], // 엔티티는 반드시 여기에 명시!
     synchronize: configService.get('DB_SYNC'),
     logging: true,
   }),
@@ -40,6 +46,7 @@ const typeOrmModuleOptions = {
     }),
     TypeOrmModule.forRootAsync(typeOrmModuleOptions),
     AuthModule,
+    UserModule,
   ],
   controllers: [],
   providers: [],
