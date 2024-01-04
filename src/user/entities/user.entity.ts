@@ -25,21 +25,21 @@ export class User {
   @Column({ type: 'varchar', select: false, nullable: false })
   password: string;
 
-  @Column({ type: 'varchar', nullable: false })
+  @Column({ type: 'varchar', nullable: false, name: 'nickName' })
   nickName: string;
 
-  @Column({ type: 'int', nullable: false })
+  @Column({ type: 'int', nullable: false, default: 1000000 })
   point: number;
 
   @Column({ type: 'enum', enum: Role, default: Role.User })
   role: Role;
 
-  @CreateDateColumn()
+  @CreateDateColumn({ name: 'createdAt' })
   createdAt: Date;
 
-  @UpdateDateColumn()
+  @UpdateDateColumn({ name: 'updatedAt' })
   updatedAt: Date;
 
-  @DeleteDateColumn()
+  @DeleteDateColumn({ name: 'deletedAt' })
   deletedAt?: Date;
 }

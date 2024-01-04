@@ -8,8 +8,4 @@ export class LoginUserDto {
   @IsString()
   @IsNotEmpty({ message: '비밀번호를 입력해주세요.' })
   password: string;
-
-  @IsString()
-  @IsNotEmpty({ message: '닉네임을 입력해주세요.' })
-  nickName: string;
 }
