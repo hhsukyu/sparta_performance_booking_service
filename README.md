@@ -1,3 +1,8 @@
+## erd
+https://www.erdcloud.com/d/MrzoeKvKvxasw7haY
+
+기능을 구현하지 못 했습니다. 과제해설을 듣고 다시 해보겠습니다.
+
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
 </p>
@@ -71,6 +76,3 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## License
 
 Nest is [MIT licensed](LICENSE).
-
-## erd
-https://www.erdcloud.com/d/MrzoeKvKvxasw7haY
